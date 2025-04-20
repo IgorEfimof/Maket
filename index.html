@@ -12,21 +12,18 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      line-height: 1.5;
     }
     header {
       background-color: #4CAF50;
       color: white;
       text-align: center;
-      padding: 0.8em 0;
-      font-size: 1.5rem; /* Гибкий размер текста */
+      padding: 0.2em 0;
     }
     footer {
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 1em 0;
-      font-size: 0.9rem; /* Размер текста для футера */
+      padding: 0.5em 0;
     }
     footer a {
       color: #1DA1F2; /* Цвет ссылки (например, синий для Telegram) */
@@ -46,7 +43,6 @@
       justify-content: space-between; /* Пространство между блоками */
       align-items: flex-start; /* Выравнивание по верхнему краю */
       gap: 1em; /* Расстояние между блоками */
-      flex-wrap: wrap; /* Перенос строк для адаптивности */
     }
     .furniture-list {
       background-color: #f1f1f1;
@@ -55,8 +51,7 @@
       border-radius: 4px;
       text-align: left;
       flex: 1;
-      min-width: 200px; /* Минимальная ширина */
-      max-width: 300px; /* Максимальная ширина */
+      max-width: 200px;
     }
     .dimensions {
       background-color: #f9f9f9;
@@ -65,12 +60,10 @@
       border-radius: 4px;
       text-align: left;
       flex: 2;
-      min-width: 300px; /* Минимальная ширина */
-      max-width: 600px; /* Максимальная ширина */
+      max-width: 600px;
     }
     .furniture-list h2, .dimensions h2 {
       margin-top: 0;
-      font-size: 1.2rem;
     }
     .furniture-list ul {
       list-style: none;
@@ -83,7 +76,6 @@
     .furniture-list ul li a {
       text-decoration: none;
       color: #007BFF;
-      font-size: 1rem;
     }
     .furniture-list ul li a:hover {
       text-decoration: underline;
@@ -97,23 +89,13 @@
     }
 
     /* Адаптивные стили */
-    @media (max-width: 1024px) {
-      header {
-        font-size: 1.3rem; /* Уменьшение размера текста на планшетах */
-      }
-      .content-container {
-        gap: 0.8em; /* Уменьшение расстояния между блоками */
-      }
-    }
     @media (max-width: 768px) {
       .content-container {
-        flex-direction: column; /* Вертикальное расположение для узких экранов */
-        align-items: stretch; /* Растянуть блоки на всю ширину */
-        gap: 1em;
+        gap: 0.5em; /* Уменьшение расстояния между блоками */
       }
       .furniture-list, .dimensions {
-        max-width: 100%; /* Блоки занимают всю ширину */
-        flex: none; /* Убираем гибкость */
+        flex: 1; /* Равномерное деление блоков */
+        max-width: 100%; /* Блоки уменьшатся по ширине */
       }
       .furniture-list ul li {
         font-size: 0.9em; /* Уменьшение текста на мобильных */
@@ -123,15 +105,13 @@
       }
     }
     @media (max-width: 480px) {
-      header {
-        font-size: 1.1rem; /* Уменьшение текста для смартфонов */
-      }
       .furniture-list, .dimensions {
-        padding: 0.8em; /* Уменьшение отступов */
+        flex: 1; /* Сохраняем горизонтальное расположение */
+        padding: 0.5em; /* Уменьшение внутренних отступов */
       }
       .furniture-list ul li,
       .dimensions ul li {
-        font-size: 0.8rem; /* Еще меньше текста для узких экранов */
+        font-size: 0.8em; /* Еще меньше текста для узких экранов */
       }
     }
   </style>
