@@ -25,10 +25,26 @@
       width: 100%;
     }
     main {
-      min-height: 100vh;
       padding: 2em;
       box-sizing: border-box;
-      padding-bottom: 60px; /* Отступ для футера */
+    }
+    section {
+      margin-bottom: 2em;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+    }
+    .dimensions {
+      background-color: #f9f9f9;
+      padding: 1em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      text-align: left;
     }
   </style>
 </head>
@@ -37,7 +53,18 @@
     <h1>Корпусная мебель своими руками</h1>
   </header>
   <main>
-    <p>Добавьте здесь основное содержание вашего сайта.</p>
+    <section>
+      <h2>Чертеж мебели</h2>
+      <img src="your-image.jpg" alt="Чертеж мебели">
+    </section>
+    <section class="dimensions">
+      <h2>Размеры</h2>
+      <ul>
+        <li>Высота: 100 см</li>
+        <li>Ширина: 50 см</li>
+        <li>Глубина: 30 см</li>
+      </ul>
+    </section>
   </main>
   <footer>
     <p>Права разработчика защищены. 2025 г.</p>
