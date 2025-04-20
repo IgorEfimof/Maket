@@ -30,9 +30,32 @@
       padding: 2em;
       box-sizing: border-box;
     }
-    section {
-      margin-bottom: 2em;
-      text-align: center;
+    .content-container {
+      display: flex;
+      gap: 2em; /* Расстояние между блоками */
+      justify-content: center;
+      flex-wrap: wrap; /* Перенос блоков на узких экранах */
+    }
+    .furniture-list {
+      background-color: #f1f1f1;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: left;
+      flex-basis: 25%; /* Уже по ширине */
+      max-width: 200px;
+    }
+    .dimensions {
+      background-color: #f9f9f9;
+      padding: 1em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      text-align: left;
+      flex-basis: 50%; /* Шире по ширине */
+      max-width: 600px;
+    }
+    .furniture-list h2, .dimensions h2 {
+      margin-top: 0;
     }
     img {
       max-width: 100%;
@@ -41,24 +64,23 @@
       border-radius: 4px;
       padding: 5px;
     }
-    .dimensions {
-      background-color: #f9f9f9;
-      padding: 1em;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      text-align: left;
-      max-width: 600px;
-      margin: 0 auto;
+    section {
+      margin-bottom: 2em;
+      text-align: center;
     }
 
     /* Адаптивные стили */
     @media (max-width: 768px) {
+      .content-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .furniture-list, .dimensions {
+        flex-basis: 100%; /* Растягиваем блоки на всю ширину */
+        max-width: 100%;
+      }
       header, footer {
         font-size: 0.9em;
-      }
-      .dimensions {
-        font-size: 0.9em;
-        padding: 0.8em;
       }
     }
 
@@ -67,7 +89,7 @@
         font-size: 0.8em;
         padding: 0.5em;
       }
-      .dimensions {
+      .furniture-list, .dimensions {
         font-size: 0.8em;
         padding: 0.5em;
       }
@@ -83,21 +105,23 @@
       <h2>Шкаф раздвижной с наполнением</h2>
       <img src="https://i.imgur.com/zrtN5P0.jpeg" alt="Чертеж мебели">
     </section>
-   <section class="dimensions">
-      <h2>Мебель</h2>
-      <ul>
-        <li>Шкаф</li>
-        <li>Комод</li>
-        <li>Стол</li>
-      </ul>
-    </section>
-    <section class="dimensions">
-      <h2>Размеры</h2>
-      <ul>
-        <li>Высота: 2200 см</li>
-        <li>Ширина: 2402 см</li>
-        <li>Глубина: 650 см</li>
-      </ul>
+    <section class="content-container">
+      <div class="furniture-list">
+        <h2>Мебель</h2>
+        <ul>
+          <li>Шкаф</li>
+          <li>Комод</li>
+          <li>Стол</li>
+        </ul>
+      </div>
+      <div class="dimensions">
+        <h2>Размеры</h2>
+        <ul>
+          <li>Высота: 2200 см</li>
+          <li>Ширина: 2402 см</li>
+          <li>Глубина: 650 см</li>
+        </ul>
+      </div>
     </section>
   </main>
   <footer>
