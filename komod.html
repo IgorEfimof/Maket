@@ -1,1 +1,143 @@
-2
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корпусная мебель своими руками</title>
+  <style>
+    /* Общие стили */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 0.2em 0;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 0.3em 0;
+    }
+    main {
+      flex: 1;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+    .content-container {
+      display: flex; /* Горизонтальное размещение блоков */
+      justify-content: space-between; /* Пространство между блоками */
+      align-items: flex-start; /* Выравнивание по верхнему краю */
+      gap: 1em; /* Расстояние между блоками */
+    }
+    .furniture-list {
+      background-color: #f1f1f1;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: left;
+      flex: 1;
+      max-width: 200px;
+    }
+    .dimensions {
+      background-color: #f9f9f9;
+      padding: 1em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      text-align: left;
+      flex: 2;
+      max-width: 600px;
+    }
+    .furniture-list h2, .dimensions h2 {
+      margin-top: 0;
+    }
+    .furniture-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .furniture-list ul li {
+      margin-bottom: 0.5em;
+    }
+    .furniture-list ul li a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    .furniture-list ul li a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+    }
+
+    /* Адаптивные стили */
+    @media (max-width: 768px) {
+      .content-container {
+        gap: 0.5em; /* Уменьшение расстояния между блоками */
+      }
+      .furniture-list, .dimensions {
+        flex: 1; /* Равномерное деление блоков */
+        max-width: 100%; /* Блоки уменьшатся по ширине */
+      }
+      .furniture-list ul li {
+        font-size: 0.9em; /* Уменьшение текста на мобильных */
+      }
+      .dimensions ul li {
+        font-size: 0.9em;
+      }
+    }
+    @media (max-width: 480px) {
+      .furniture-list, .dimensions {
+        flex: 1; /* Сохраняем горизонтальное расположение */
+        padding: 0.5em; /* Уменьшение внутренних отступов */
+      }
+      .furniture-list ul li,
+      .dimensions ul li {
+        font-size: 0.8em; /* Еще меньше текста для узких экранов */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Корпусная мебель своими руками</h1>
+  </header>
+  <main>
+    <section>
+      <h2 style="text-align: center;">Шкаф раздвижной с наполнением</h2>
+      <img src="https://i.imgur.com/zrtN5P0.jpeg" alt="Чертеж мебели">
+    </section>
+    <section class="content-container">
+      <div class="furniture-list">
+        <h2>Мебель</h2>
+        <ul>
+          <li><a href="index.html">Шкаф</a></li>
+          <li><a href="komod.html">Комод</a></li>
+          <li><a href="stol.html">Стол</a></li>
+        </ul>
+      </div>
+      <div class="dimensions">
+        <h2>Размеры</h2>
+        <ul>
+          <li>Высота: 2200 см</li>
+          <li>Ширина: 2402 см</li>
+          <li>Глубина: 650 см</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Права разработчика защищены. 2025 г.</p>
+  </footer>
+</body>
+</html>
