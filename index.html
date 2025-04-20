@@ -31,8 +31,9 @@
       box-sizing: border-box;
     }
     .content-container {
-      display: flex;
-      justify-content: space-between; /* Размещает блоки по горизонтали */
+      display: flex; /* Горизонтальное выравнивание блоков */
+      justify-content: space-between; /* Пространство между блоками */
+      align-items: flex-start; /* Выравнивание блоков по верхнему краю */
       gap: 2em; /* Расстояние между блоками */
     }
     .furniture-list {
@@ -41,8 +42,8 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       text-align: left;
-      flex: 1; /* Блок с перечнем мебели */
-      max-width: 300px;
+      flex: 1; /* Уменьшенная ширина для блока мебели */
+      max-width: 200px;
     }
     .dimensions {
       background-color: #f9f9f9;
@@ -50,7 +51,7 @@
       border: 1px solid #ddd;
       border-radius: 4px;
       text-align: left;
-      flex: 2; /* Блок с размерами шире */
+      flex: 2; /* Шире блок для размеров */
       max-width: 600px;
     }
     .furniture-list h2, .dimensions h2 {
@@ -71,7 +72,7 @@
     /* Адаптивные стили */
     @media (max-width: 768px) {
       .content-container {
-        flex-direction: column; /* Переключение на вертикальное расположение на маленьких экранах */
+        flex-direction: column; /* Переключение на вертикальное расположение блоков */
         align-items: center;
       }
       .furniture-list, .dimensions {
