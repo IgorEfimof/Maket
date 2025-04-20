@@ -17,7 +17,7 @@
       background-color: #4CAF50;
       color: white;
       text-align: center;
-      padding: 0.2em 0; /* Уменьшена высота хедера */
+      padding: 0.2em 0;
     }
     footer {
       background-color: #333;
@@ -27,14 +27,14 @@
     }
     main {
       flex: 1;
-      padding: 2em;
+      padding: 1em;
       box-sizing: border-box;
     }
     .content-container {
-      display: flex; /* Горизонтальное расположение блоков */
+      display: flex; /* Горизонтальное размещение блоков */
       justify-content: space-between; /* Пространство между блоками */
       align-items: flex-start; /* Выравнивание по верхнему краю */
-      gap: 2em; /* Расстояние между блоками */
+      gap: 1em; /* Расстояние между блоками */
     }
     .furniture-list {
       background-color: #f1f1f1;
@@ -42,7 +42,7 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       text-align: left;
-      flex: 1; /* Меньший блок */
+      flex: 1;
       max-width: 200px;
     }
     .dimensions {
@@ -51,7 +51,7 @@
       border: 1px solid #ddd;
       border-radius: 4px;
       text-align: left;
-      flex: 2; /* Шире блок */
+      flex: 2;
       max-width: 600px;
     }
     .furniture-list h2, .dimensions h2 {
@@ -79,23 +79,31 @@
       border-radius: 4px;
       padding: 5px;
     }
-    section {
-      margin-bottom: 2em;
-      text-align: center;
-    }
 
     /* Адаптивные стили */
     @media (max-width: 768px) {
       .content-container {
-        flex-direction: column; /* Переключение на вертикальное расположение */
-        align-items: center;
+        gap: 0.5em; /* Уменьшение расстояния между блоками */
       }
       .furniture-list, .dimensions {
-        flex: 1;
-        max-width: 100%; /* Растягивание блоков на всю ширину */
+        flex: 1; /* Равномерное деление блоков */
+        max-width: 100%; /* Блоки уменьшатся по ширине */
       }
-      header, footer {
+      .furniture-list ul li {
+        font-size: 0.9em; /* Уменьшение текста на мобильных */
+      }
+      .dimensions ul li {
         font-size: 0.9em;
+      }
+    }
+    @media (max-width: 480px) {
+      .furniture-list, .dimensions {
+        flex: 1; /* Сохраняем горизонтальное расположение */
+        padding: 0.5em; /* Уменьшение внутренних отступов */
+      }
+      .furniture-list ul li,
+      .dimensions ul li {
+        font-size: 0.8em; /* Еще меньше текста для узких экранов */
       }
     }
   </style>
